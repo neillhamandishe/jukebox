@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>JukeBox</title>
 </head>
+
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li class="brand">The Vibe Restaurant</li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li class="brand">The Vibe Restaurant</li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container">
         <section class="hero">
             <div class="hero-left">
                 <div class="content-section">
-                    <div class="play-icon"></div>
-                    <h1 class="hero-title">JukeBox</h1>
-                    <p class="hero-text">Set the mood in the restaurant</p>
+                    <div class="play-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#fff" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="hero-title">JukeBox</h1>
+                        <p class="hero-text">Set the mood in the restaurant</p>
+                    </div>
                 </div>
                 <div class="search-section">
-                    <form action="." method="get" class="inline-form">
-                        <input type="search" name="q" id="q">
-                        <button class="btn btn-blue search-btn">Search</button>
+                    <form action="." method="get" class="inline-form" id="search-form">
+                        <label for="q">Find a song</label>
+                        <div class="input-group">
+                            <input type="search" name="q" id="q" placeholder="Red, Taylor Swift">
+                            <button class="btn btn-blue search-btn" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -37,55 +60,96 @@
                         <p class="album-artist">Lewis Capaldi</p>
                     </div>
                     <div class="play-controls">
-                        <button class="btn play-control">prev</button>
-                        <button class="btn play-control">pause</button>
-                        <button class="btn play-control">stop</button>
-                        <button class="btn play-control">next</button>
+                        <button class="btn play-control">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+                                <path d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                        </button>
+                        <button class="btn play-control">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                            </svg>
+                        </button>
+                        <button class="btn play-control">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-stop-fill" viewBox="0 0 16 16">
+                                <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z"/>
+                            </svg>
+                        </button>
+                        <button class="btn play-control">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-skip-forward-fill" viewBox="0 0 16 16">
+                                <path d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636C.693 12.703 0 12.324 0 11.693V4.308c0-.63.693-1.01 1.233-.696L7.5 7.248v-2.94c0-.63.693-1.01 1.233-.696L15 7.248V4a.5.5 0 0 1 .5-.5z"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="album-cover"></div>
+                <div class="right">    
+                    <img class="album-cover" src="./img/lewis_capaldi_breach.jpg" alt="Album Art">
                 </div>
             </div>
         </section>
 
-        <section class="library" id="library">
-            <h3 class="section-title">Library</h3>
-            <div class="library-grid">
-                <div class="album-card">
-                    <div class="album-art"></div>
-                    <div class="album-info">
-                        <h4 class="title">Stranger Trails</h4>
-                        <p class="artist">Lord Huron</p>
-                        <p class="track-count">12 Tracks</p>
+        <div class="col-2">
+            <section class="library" id="library">
+                <h3 class="section-title" id="library-title">Library</h3>
+                <div class="library-grid" id="library-grid">
+                    <!-- <div class="album-card">
+                        <img src="./img/lord_huron_strangertrails.jpg" alt="album art" class="album-art" />
+                        <div class="album-info">
+                            <h4 class="title">Stranger Trails</h4>
+                            <p class="artist">Lord Huron</p>
+                            <p class="track-count">12 Tracks</p>
+                        </div>
                     </div>
-                </div>
-                <div class="album-card">
-                    <div class="album-art"></div>
-                    <div class="album-info">
-                        <h4 class="title">Equals</h4>
-                        <p class="artist">Ed Sheeran</p>
-                        <p class="track-count">10 Tracks</p>
+                    <div class="album-card">
+                        <img src="./img/ed_sheeran_equals.jpg" alt="album art" class="album-art" />
+                        <div class="album-info">
+                            <h4 class="title">Equals</h4>
+                            <p class="artist">Ed Sheeran</p>
+                            <p class="track-count">10 Tracks</p>
+                        </div>
                     </div>
-                </div>
-                <div class="album-card">
-                    <div class="album-art"></div>
-                    <div class="album-info">
-                        <h4 class="title">Back From The Edge</h4>
-                        <p class="artist">James Arthur</p>
-                        <p class="track-count">8 Tracks</p>
+                    <div class="album-card">
+                        <img src="./img/james_arthur_backfromtheedge.jpg" alt="album art" class="album-art" />
+                        <div class="album-info">
+                            <h4 class="title">Back From The Edge</h4>
+                            <p class="artist">James Arthur</p>
+                            <p class="track-count">8 Tracks</p>
+                        </div>
                     </div>
-                </div>
-                <div class="album-card">
-                    <div class="album-art"></div>
-                    <div class="album-info">
-                        <h4 class="title">21</h4>
-                        <p class="artist">Adele</p>
-                        <p class="track-count">12 Tracks</p>
+                    <div class="album-card">
+                        <img src="./img/adele_21.png" alt="album art" class="album-art" />
+                        <div class="album-info">
+                            <h4 class="title">21</h4>
+                            <p class="artist">Adele</p>
+                            <p class="track-count">12 Tracks</p>
+                        </div>
                     </div>
+                    <div class="album-card">
+                        <img src="./img/lewis_capaldi_breach.jpg" alt="album art" class="album-art" />
+                        <div class="album-info">
+                            <h4 class="title">Breach</h4>
+                            <p class="artist">Lewis Capaldi</p>
+                            <p class="track-count">13 Tracks</p>
+                        </div>
+                    </div> -->
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="playlist-container" id="playlist-container">
+                <h3 class="section-title">Playlist</h3>
+                <ul class="playlist">
+                    <!-- <li class="play-item">
+                        1. Someone You Loved
+                    </li>
+                    <li class="play-item">
+                        2. Bruises
+                    </li> -->
+                </ul>
+            </section>
+        </div>
     </main>
+
+    <!-- JS App Mount Point -->
+    <script src="./src/app.js"></script>
 </body>
+
 </html>
